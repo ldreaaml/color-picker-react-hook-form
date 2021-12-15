@@ -51,13 +51,13 @@ export const ThemeEditor = (props: Props) => {
       <PreviewPanel />
       {process.env.NODE_ENV === "development" && <DevTool control={control} />}
       <form>
-        <Button name={"test"} disabled={!isDirty} onClick={resetColor}>
+        <Button disabled={!isDirty} onClick={resetColor}>
           Reset Color
         </Button>
         <Controller
           name={"primaryColor"}
           control={control}
-          render={({ field: { value, onChange } }) => (
+          render={({ field: { value, onChange, onBlur } }) => (
             <>
               <ColorPicker colorValue={value} onChange={onChange} />
             </>
