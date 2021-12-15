@@ -1,3 +1,3 @@
 import { atom } from "jotai";
 
-export const defaultAtom = atom("#0080c9");
+export const myTheme = atom("#0080c9");

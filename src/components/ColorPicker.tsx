@@ -1,4 +1,3 @@
-import { Typography } from "@material-ui/core";
 import { ChangeEventHandler, useState } from "react";
 
 interface Props {
@@ -17,7 +16,6 @@ export const ColorPicker = ({ colorValue, onChange }: Props) => {
   return (
     <>
       <input type="color" value={newColor} onChange={handleOnChange} />
-      <Typography>{newColor}</Typography>
     </>
   );
 };

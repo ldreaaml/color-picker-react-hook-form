@@ -1,7 +1,7 @@
-import { Button } from "@material-ui/core";
+import { Button, ButtonProps } from "@material-ui/core";
 import React from "react";
 
-interface Props {}
+interface Props extends ButtonProps {}
 
 export const ResetButton = (props: Props) => {
   return (

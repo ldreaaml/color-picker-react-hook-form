@@ -7,7 +7,7 @@ import {
   Theme,
 } from "@material-ui/core";
 import { useAtom } from "jotai";
-import { defaultAtom } from "./atoms/defaultColor";
+import { myTheme } from "./atoms/defaultColor";
 import { PreviewItem } from "./PreviewItem";
 
 interface Props {}
@@ -24,7 +24,7 @@ export const PreviewPanel = (props: Props) => {
   const classes = useStyles();
 
   //use atom for default color
-  const [theme] = useAtom(defaultAtom);
+  const [theme] = useAtom(myTheme);
 
   //create mui theme
   const currentTheme = createTheme({
