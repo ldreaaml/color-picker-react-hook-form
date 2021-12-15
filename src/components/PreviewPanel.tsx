@@ -24,7 +24,7 @@ export const PreviewPanel = (props: Props) => {
   const classes = useStyles();
 
   //use atom for default color
-  const [theme, setTheme] = useAtom(defaultAtom);
+  const [theme] = useAtom(defaultAtom);
 
   //create mui theme
   const currentTheme = createTheme({
