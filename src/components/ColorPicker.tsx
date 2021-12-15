@@ -1,21 +1,18 @@
-import { ChangeEventHandler, useState } from "react";
+import { ChangeEventHandler } from "react";
 
 interface Props {
   colorValue: string;
   onChange(value: string): void;
 }
 
-export const ColorPicker = ({ colorValue, onChange }: Props) => {
-  const [newColor, setNewColor] = useState<string>(colorValue);
-
-  //update colorValue when its value changes
+export const ColorPicker = ({ colorValue, onChange, ...props }: Props) => {
+  //call onChange to update primaryColor in form
   const handleOnChange: ChangeEventHandler<HTMLInputElement> = (e) => {
-    setNewColor(e.target.value);
     onChange(e.target.value);
   };
   return (
     <>
-      <input type="color" value={newColor} onChange={handleOnChange} />
+      <input type="color" value={colorValue} onChange={handleOnChange} />
     </>
   );
 };
